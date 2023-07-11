@@ -28,7 +28,7 @@
 
 - name: Install RPM packages
   become: yes
-  package:
+  dnf:
     name:
       - ShellCheck
       - bash-completion
@@ -48,7 +48,7 @@
 
 - name: Ensure that podman(1) is absent
   become: yes
-  package:
+  dnf:
     name:
       - podman
     state: absent
@@ -56,7 +56,7 @@
 
 - name: Ensure that skopeo(1) is absent
   become: yes
-  package:
+  dnf:
     name:
       - skopeo
     state: absent

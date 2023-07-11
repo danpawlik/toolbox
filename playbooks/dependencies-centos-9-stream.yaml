@@ -1,6 +1,6 @@
 - name: Install RPM packages from CentOS Stream
   become: yes
-  package:
+  dnf:
     name:
       - bash-completion
       - flatpak-session-helper
@@ -18,20 +18,20 @@
 
 - name: Install RPM packages from CentOS Stream CodeReady Linux Builder
   become: yes
-  package:
+  dnf:
     enablerepo: crb
     name:
       - golang-github-cpuguy83-md2man
 
 - name: Enable EPEL
   become: yes
-  package:
+  dnf:
     name:
       - epel-release
 
 - name: Install RPM packages from EPEL
   become: yes
-  package:
+  dnf:
     name:
       - ShellCheck
       - bats

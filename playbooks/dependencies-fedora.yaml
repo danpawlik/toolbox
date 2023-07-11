@@ -16,7 +16,7 @@
 
 - name: Install RPM packages
   become: yes
-  package:
+  dnf:
     update_cache: "{{ true if zuul.attempts > 1 else false }}"
     name:
       - ShellCheck
